@@ -1,0 +1,58 @@
+<mat-card>
+
+  <mat-card-header></mat-card-header>
+  <mat-card-content>
+  <!-- <mat-card-content>
+    <mat-form-field >
+    <input matInput placeholder="Search">
+  </mat-form-field> -->
+  <input placeholder="Search" (keyup)="filter($event)"/>
+  </mat-card-content>
+    
+    <mat-card-content>
+   
+   
+   
+  <div class="mat-elevation-z8">
+    <table matSort mat-table [dataSource]="datasource">
+   
+    
+      <ng-container matColumnDef="id">
+        <th mat-sort-header  mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+      </ng-container>
+   
+     
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let x"> {{x.name}} </td>
+      </ng-container>
+   
+     
+      <ng-container matColumnDef="City">
+        <th mat-header-cell *matHeaderCellDef> City </th>
+        <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef> Price </th>
+        <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+      </ng-container>
+   
+      
+     
+   
+      <tr mat-header-row *matHeaderRowDef="displaycolumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displaycolumns;"></tr> 
+    </table>
+   
+  </div>
+</mat-card-content>
+<mat-card-footer>
+<mat-paginator [pageSizeOptions]="[5, 10, 20]"
+showFirstLastButtonsaria-label="Select page of periodic elements">
+</mat-paginator>
+</mat-card-footer>
+  </mat-card>
+  
+
