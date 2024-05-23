@@ -1,0 +1,79 @@
+
+<section class="vh-350 gradient-custom">
+    <div class="container py-5 h-50">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h1 class="mb-4 pb-2 pb-md-0 mb-md-5">Forgot  Password</h1>
+           
+              <form #myform="ngForm"  >
+              <div class="row">
+                  <div class="col-md-6 mb-4">
+                      <!-- <div class="form-outline">
+                        
+                          <input  type="email" id="imageid" class="form-control form-control-lg" readonly/>
+                          <label class="form-label" for="imageid"> your email</label>
+                        </div> -->
+                        <div class="form-outline">
+                          <input type="text" id="imageid" [(ngModel)]="emailId" name="email" class="form-control form-control-lg"  readonly />
+                          <label class="form-label" for="imageid">Email </label>
+                        </div>
+                        
+                  
+
+
+                      <div class="form-outline">
+                        <input type="date" id="imageid" [(ngModel)]="DoB" name="date" class="form-control form-control-lg" #date required />
+                        <label class="form-label" for="imageid">  Your DoB</label>
+                      </div>
+                      
+
+
+                      <div class="form-outline">
+                        <input type="password" id="imageid" ngModel #password="ngModel" name="password" class="form-control form-control-lg" #pass required/>
+                        <label class="form-label" for="imageid"> Enter New Password</label>
+                      </div>
+                      <div class="alert alert-danger" *ngIf="password.touched && password.invalid">
+                      <div *ngIf="password.errors && password.errors['required']">
+                         Password is required
+                      </div>
+                    </div>
+  
+
+                    </div>
+                
+                
+  
+             </div>
+  
+                <div class="mt-4 pt-2">
+                   
+                    <input class="btn btn-primary col-lg-5" type="button" value=" Update" [disabled]="myform.invalid" (click)="verifyURLData(pass.value)" />
+                    
+                
+                  </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+  
+        
+      
+    
+  
+  
+         
+  
+
+
+

@@ -1,0 +1,118 @@
+<section class="vh-350 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h1 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h1>
+              <form [formGroup]="regData" (ngSubmit)="Registerdata()">
+ 
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+
+                    <div class="alert alert-danger" *ngIf="getControls['name'].invalid && getControls['name'].touched">
+                      <div *ngIf="getControls['name'].errors && getControls['name'].errors['required']">
+                          Name required
+                      </div></div>
+                    <div class="form-outline">
+                      <input type="text" id="imageid7" class="form-control form-control-lg" formControlName="name" required/>
+                      <label class="form-label" for="imageid"> Name</label>
+                    </div>
+                    
+ 
+                  </div>
+
+                  <div class="alert alert-danger" *ngIf="getControls['email'].invalid && getControls['email'].touched">
+                    <div *ngIf="getControls['email'].errors && getControls['email'].errors['required']">
+                        Email required
+                    </div>
+                    <div *ngIf="getControls['email'].errors && getControls['email'].errors['pattern']">
+                      <strong>Email-Id Should be Proper Format</strong>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="email" id="imagename1" class="form-control form-control-lg"  formControlName="email" required/>
+                      <label class="form-label" for="imagename">Email</label>
+                    </div>
+                  </div>
+
+
+                  <div class="alert alert-danger" *ngIf="getControls['dob'].invalid && getControls['dob'].touched">
+                    <div *ngIf="getControls['dob'].errors && getControls['dob'].errors['required']">
+                        Date required
+                    </div></div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="date" id="imageurl4" class="form-control form-control-lg"  formControlName="dob" required/>
+                      <label class="form-label" for="imageurl">DOB</label>
+                    </div>
+                  </div>
+
+                  <div class="alert alert-danger" *ngIf="getControls['mobile'].invalid && getControls['mobile'].touched">
+                    <div *ngIf="getControls['mobile'].errors && getControls['mobile'].errors['required']">
+                        Mobile required
+                    </div></div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="imageurl3" class="form-control form-control-lg"  formControlName="mobile" required/>
+                      <label class="form-label" for="imageurl">Mobile</label>
+                    </div>
+                  </div>
+
+                  <div class="alert alert-danger" *ngIf="getControls['password'].invalid && getControls['password'].touched">
+                    <div *ngIf="getControls['password'].errors && getControls['password'].errors['required']">
+                        Password required
+                    </div></div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="password" id="imageurl2" class="form-control form-control-lg"  formControlName="password" required />
+                      <label class="form-label" for="imageurl">Password</label>
+                    </div>
+                  </div>
+ 
+                  <div class="alert alert-danger" *ngIf="getControls['address'].invalid && getControls['address'].touched">
+                    <div *ngIf="getControls['address'].errors && getControls['address'].errors['required']">
+                        Address required
+                    </div></div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="imagedata1" class="form-control form-control-lg"  formControlName="address" required/>
+                      <label class="form-label" for="imagedata">Address</label>
+                    </div>
+                  </div>
+                </div>
+               
+                 
+ 
+ 
+                <div class="mt-4 pt-2">
+                  
+                  <input class="btn btn-primary btn-lg" type="submit"  value="Submit"[disabled]="regData.invalid" />&nbsp;
+                  
+                </div>
+ 
+                <div class="mt-4 pt-2">
+                   
+                   
+                   
+                    
+         
+               
+                  </div>
+ 
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  
+
+         
+
+            

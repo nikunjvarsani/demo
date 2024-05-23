@@ -1,0 +1,73 @@
+<section class="vh-350 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h1 class="mb-4 pb-2 pb-md-0 mb-md-5">Login Form</h1>
+              <form [formGroup]="LogData" (ngSubmit)="LoginData()">
+  
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+  
+                    <div class="form-outline">
+                      <input type="text" id="imageid" class="form-control form-control-lg" formControlName="name" required/>
+                      <label class="form-label" for="imageid">Name</label>
+                    </div>
+                    <div class="alert alert-danger" *ngIf="getControls['name'].invalid && getControls['name'].touched">
+                      <div *ngIf="getControls['name'].errors && getControls['name'].errors['required']">
+                          Name required
+                      </div></div>
+
+  
+                  </div>
+                  
+                  
+                  
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="password" id="imagename" class="form-control form-control-lg"  formControlName="password" required />
+                    <label class="form-label" for="imagename">password</label>
+                  </div>
+                  <div class="alert alert-danger" *ngIf="getControls['password'].invalid && getControls['password'].touched">
+                    <div *ngIf="getControls['password'].errors && getControls['password'].errors['required']">
+                      password required
+                    </div></div>
+                </div>
+  
+                 
+                </div>
+            
+                
+  
+             
+  
+                <div class="mt-4 pt-2">
+                   
+                    <input class="btn btn-primary col-lg-5" type="submit" value=" submit" [disabled]="LogData.invalid" />
+                
+                  </div>
+  
+                  <p class="medium "><a class="text-muted"  routerLink="/forgetpassword">Forgot password?</a></p>
+                 
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+  
+  
+        
+      
+    
+  
+  
+         
+  
